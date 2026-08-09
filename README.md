@@ -1,66 +1,94 @@
 # Photo to Organic Knit
 
-一个开源的 Codex Skill，将照片重新创作为具有概念设计感和手工质感的毛线针织艺术海报。
+An open-source Codex skill that reimagines photographs as concept-driven, handcrafted knitted-wool art posters.
 
-An open-source Codex skill that reimagines a photograph as a concept-driven, handcrafted knitted-wool art poster.
+> 一个开源的 Codex Skill，将照片重新创作为具有概念设计感和手工质感的毛线针织艺术海报。
 
-它会保留原图方向和少量关键识别元素，主动舍弃或抽象次要细节，并重新设计构图、层次与视觉动线。最终画面融合钩针、针织、圈圈纱、毛毡、松散纤维、不规则织物边缘、编辑式留白，以及单根毛线组成的标题。这是一种真正的二次创作，而不是在照片上叠加毛线滤镜。
+Instead of applying a textile filter, the skill selects a few defining elements from the source, removes secondary detail, and invents a new composition. Crochet, knit, boucle, felt, loose fibers, irregular textile edges, editorial negative space, and single-strand yarn lettering bring the final poster to life.
 
-It preserves source orientation and a few recognition anchors, then deliberately discards or abstracts secondary detail, invents a new composition, and applies tactile crochet, knit, boucle, felt, loose fibers, irregular textile edges, editorial negative space, and single-strand yarn lettering. It is genuine reinterpretation—not a wool filter over the original photograph.
+> 它并非简单叠加织物滤镜，而是从原图中筛选少量关键元素，舍弃次要细节，再重新设计构图。最终画面融合钩针、针织、圈圈纱、毛毡、松散纤维、不规则织物边缘、编辑式留白，以及单根毛线组成的标题。
 
-## 效果对比 · Before and After
+## Before and After
 
-Skill 会保留原图中最具辨识度的元素，同时重新构建画面层级、形状、留白和视觉路径。
+### 效果对比
 
-The skill keeps the most recognizable anchors while rebuilding hierarchy, shapes, negative space, and visual flow.
+The most recognizable anchors remain, while hierarchy, shapes, negative space, and visual flow are rebuilt as tactile textile art.
+
+> 保留原图中最具辨识度的元素，同时将画面层级、形状、留白和视觉动线重新构建为具有触感的毛线艺术。
 
 <p align="center">
   <img src="assets/train-before-after.png" alt="Steam train before and after" width="48%">
   <img src="assets/forest-before-after.png" alt="Misty forest before and after" width="48%">
 </p>
 
-## 特点 · Features
+## Features
 
-- 自动匹配横图、竖图或方图的原始方向。 / Matches landscape, portrait, or square orientation.
-- 生成前将原图元素分为保留、转化和舍弃三组。 / Sorts elements into retain, transform, and discard groups.
-- 建立一个明确的视觉概念，并改变原构图至少三项结构特征。 / Builds one visual concept and changes at least three structural qualities.
-- 灵活使用负形、织物岛屿、毛线路径、尺度对比或分层拼贴。 / Uses negative space, textile islands, yarn paths, scale contrast, or layered collage.
-- 控制主体占比并保留充足留白，适合封面与品牌视觉。 / Keeps generous negative space for cover and brand layouts.
-- 加入克制的抽丝、散线和不规则边缘，保留真实手作感。 / Adds restrained loose fibers and irregular handmade edges.
-- 只重塑关键元素，不照搬示例主体，也不描摹原图构图。 / Reimagines only key elements without tracing the source layout.
-- 默认加入清晰的 2–4 词主题标题，使用单根毛线形成的儿童手写字。 / Adds a readable 2–4 word title in childlike single-strand yarn lettering by default.
+### 特点
 
-## 安装 · Install
+- **Source-aware orientation** — Landscape, portrait, and square images keep their original orientation.<br>
+  **匹配原图方向** — 横图、竖图和方图均保持各自的画幅方向。
 
-将 `photo-to-organic-knit` 文件夹复制到 Codex Skills 目录：
+- **Intentional selection** — Elements are sorted into retain, transform, and discard groups before generation.<br>
+  **主动筛选元素** — 生成前将原图内容分为保留、转化和舍弃三组。
+
+- **True reinterpretation** — One clear visual concept guides at least three structural changes to the original composition.<br>
+  **真正的二次创作** — 以一个明确的视觉概念为核心，对原构图进行至少三项结构性改变。
+
+- **Strong art direction** — Negative-space symbols, textile islands, yarn paths, scale contrast, and layered collage create a distinctive poster.<br>
+  **鲜明的设计语言** — 灵活运用负形、织物岛屿、毛线路径、尺度对比和分层拼贴。
+
+- **Editorial breathing room** — A compact textile vignette leaves generous space for covers and brand layouts.<br>
+  **编辑式留白** — 控制针织主体占比，为封面和品牌视觉保留充足空间。
+
+- **Organic imperfections** — Loose fibers, stray yarn, and uneven edges replace machine-perfect repetition.<br>
+  **自然手作痕迹** — 通过抽丝、散线和不规则边缘，避免机械般整齐的效果。
+
+- **Single-yarn title** — A readable two-to-four-word thematic title is formed from one continuous strand by default.<br>
+  **单根毛线标题** — 默认加入清晰的两至四词主题标题，以单根毛线自然摆成。
+
+## Installation
+
+### 安装
 
 Copy the `photo-to-organic-knit` folder into your Codex skills directory:
+
+> 将 `photo-to-organic-knit` 文件夹复制到 Codex Skills 目录：
 
 ```bash
 cp -R photo-to-organic-knit "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
-重启或刷新 Codex，使其发现新 Skill。 / Restart or refresh Codex so it can discover the skill.
+Restart or refresh Codex so it can discover the skill.
 
-## 使用 · Use
+> 重启或刷新 Codex，使其发现新 Skill。
 
-上传一张照片并调用 Skill： / Attach a photograph and invoke the skill:
+## Usage
+
+### 使用
+
+Attach a photograph and invoke the skill:
+
+> 上传一张照片并调用 Skill：
 
 ```text
 Use $photo-to-organic-knit to turn this photo into an organic knitted-wool illustration.
 ```
 
-也可以指定准确的标题文字： / You can also specify exact title text:
+You can also provide exact title text:
+
+> 也可以指定准确的标题文字：
 
 ```text
 Use $photo-to-organic-knit on this image and add the title "Wind Through Pines" in clear single-strand yarn handwriting.
 ```
 
-默认情况下，横图生成横版插图，竖图生成竖版插图，方图保持方形。
-
 By default, landscape sources produce landscape illustrations, portrait sources produce portrait illustrations, and square sources remain square.
 
-## 仓库结构 · Repository Structure
+> 默认情况下，横图生成横版插图，竖图生成竖版插图，方图保持方形。
+
+## Repository Structure
+
+### 仓库结构
 
 ```text
 photo-to-organic-knit/
@@ -70,6 +98,10 @@ photo-to-organic-knit/
 └── references/style-spec.md
 ```
 
-## 许可证 · License
+## License
 
-本项目采用 MIT License。 / Released under the MIT License. See [LICENSE](LICENSE).
+### 许可证
+
+Released under the MIT License. See [LICENSE](LICENSE).
+
+> 本项目采用 MIT License，详见 [LICENSE](LICENSE)。
