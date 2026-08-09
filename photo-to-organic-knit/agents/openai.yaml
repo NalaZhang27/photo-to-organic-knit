@@ -1,0 +1,4 @@
+interface:
+  display_name: "Photo to Organic Knit"
+  short_description: "Turn photos into organic knitted-wool illustrations"
+  default_prompt: "Use $photo-to-organic-knit to transform this photo into a spacious handmade knitted-wool illustration."
